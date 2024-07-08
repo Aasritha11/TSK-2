@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this style block to ensure the background image is visible */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Set the body height to 100% of the viewport */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header, main {
+            z-index: 1; /* Ensure the content is on top of the background image */
+            position: relative;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav li:first-child {
+            flex: 1;
+        }
+        nav li:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body style="background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80'); background-size: cover; background-position: center;">
+    <header>
+        <nav>
+            <ul>
+                <li><h1>To-Do List</h1></li>
+                <li><button id="signin-btn">Sign In</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="todo-list">
+            <h2>Tasks</h2>
+            <ul id="task-list">
+                <!-- Tasks will be displayed here -->
+            </ul>
+            <input type="text" id="new-task-input" placeholder="Add new task">
+            <button id="add-task-btn">Add Task</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
